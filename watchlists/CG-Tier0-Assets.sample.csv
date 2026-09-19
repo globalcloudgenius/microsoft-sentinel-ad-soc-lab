@@ -1,0 +1,4 @@
+AssetKey,Hostname,AssetType,Tier,Owner,Criticality,Notes
+AD-DC-01,AD-DC-01,DomainController,Tier0,CloudGenius,Critical,Primary Active Directory domain controller
+CG-CA-01,CG-CA-01,CertificateAuthority,Tier0,CloudGenius,Critical,Enterprise certificate authority
+CG-ENTRA-01,CG-ENTRA-01,EntraConnect,Tier0,CloudGenius,Critical,Microsoft Entra Connect server
