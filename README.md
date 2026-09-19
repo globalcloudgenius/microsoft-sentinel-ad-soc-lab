@@ -1,5 +1,7 @@
 # Microsoft Sentinel AD SOC Lab
 
+**Client overview:** [Client-facing case study](./CASE-STUDY.md)
+
 A practical hybrid SOC implementation built in the CloudGenius lab to monitor an on-premises Active Directory domain controller with Microsoft Sentinel while keeping Azure ingestion and add-on costs intentionally low.
 
 This repository documents the actual implementation completed in the lab: onboarding an on-prem Windows Server 2025 domain controller to Azure Arc, installing Azure Monitor Agent (AMA), creating a tightly filtered Data Collection Rule (DCR), validating SecurityEvent ingestion in Microsoft Sentinel, and enriching detections with Tier-0 and privileged-account watchlists.
