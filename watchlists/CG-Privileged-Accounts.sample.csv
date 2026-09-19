@@ -1,0 +1,2 @@
+AccountKey,AccountName,UPN,PrivilegeLevel,IdentityType,Owner,Status,Notes
+isaac.admin,isaac.admin,isaac.admin@cloudgenius.ca,Tier0,Admin,CloudGenius,Active,Privileged Active Directory administrative account
