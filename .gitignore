@@ -1,0 +1,15 @@
+# Local exports and temporary files
+*.log
+*.tmp
+*.bak
+*.json
+
+# Environment-specific values
+.env
+.env.*
+secrets/
+config.local.*
+
+# Raw security exports
+exports/
+evidence/
