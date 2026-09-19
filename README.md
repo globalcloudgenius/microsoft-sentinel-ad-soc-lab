@@ -162,3 +162,22 @@ Controls include:
 ## Security note
 
 This is a sanitized portfolio repository. Subscription IDs, tenant IDs, object IDs, credentials, tokens, and unnecessary internal details are excluded.
+
+---
+
+## Consulting relevance
+
+This implementation demonstrates a repeatable approach for organizations that need to onboard hybrid Windows/Active Directory telemetry into Microsoft Sentinel without defaulting to uncontrolled log volume.
+
+Typical consulting use cases include:
+
+- Microsoft Sentinel onboarding and architecture;
+- Azure Arc / AMA / DCR deployment;
+- Active Directory security-event collection strategy;
+- KQL detection engineering;
+- privileged-identity and Tier-0 monitoring;
+- ingestion-cost review and optimization;
+- SOC validation, runbooks, and operational handoff.
+
+**Consulting inquiries:** advisory@cloudgenius.ca · https://cloudgenius.ca
+
