@@ -2,6 +2,39 @@
 
 **Client overview:** [Client-facing case study](./CASE-STUDY.md)
 
+## Outcome & Evidence
+
+| Evidence | Result |
+|---|---|
+| On-premises AD monitoring | Implemented through Azure Arc + AMA |
+| Data collection | Dedicated DCR scoped to the domain controller |
+| SIEM destination | Microsoft Sentinel / Log Analytics |
+| Failed logon validation | Event ID 4625 generated and observed |
+| Privileged logon validation | Event ID 4672 observed |
+| Tier-0 context | Watchlist created and validated |
+| Privileged identity context | Watchlist created and validated |
+| Cost approach | Curated high-value SecurityEvent collection rather than full-volume ingestion |
+
+**Proof:** Validation details, event strategy, and watchlist design are documented below and in the [client-facing case study](./CASE-STUDY.md).
+
+## Architecture at a glance
+
+```mermaid
+flowchart LR
+    A[On-Prem AD Domain Controller] --> B[Azure Arc]
+    B --> C[Azure Monitor Agent]
+    C --> D[Dedicated Data Collection Rule]
+    D --> E[Log Analytics Workspace]
+    E --> F[Microsoft Sentinel]
+    F --> G[KQL]
+    F --> H[Watchlists]
+    F --> I[Analytics Rules / Incidents]
+    H --> J[Tier-0 Assets]
+    H --> K[Privileged Accounts]
+```
+
+---
+
 A practical hybrid SOC implementation built in the CloudGenius lab to monitor an on-premises Active Directory domain controller with Microsoft Sentinel while keeping Azure ingestion and add-on costs intentionally low.
 
 This repository documents the actual implementation completed in the lab: onboarding an on-prem Windows Server 2025 domain controller to Azure Arc, installing Azure Monitor Agent (AMA), creating a tightly filtered Data Collection Rule (DCR), validating SecurityEvent ingestion in Microsoft Sentinel, and enriching detections with Tier-0 and privileged-account watchlists.
