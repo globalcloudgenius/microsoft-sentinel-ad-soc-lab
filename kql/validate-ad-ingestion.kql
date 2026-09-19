@@ -1,0 +1,5 @@
+SecurityEvent
+| where Computer contains "AD-DC-01"
+| where TimeGenerated > ago(60m)
+| summarize Count=count() by EventID
+| sort by Count desc
