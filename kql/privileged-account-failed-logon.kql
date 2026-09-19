@@ -1,0 +1,10 @@
+let PrivilegedAccounts =
+    _GetWatchlist('CG-Privileged-Accounts')
+    | project AccountKey = tolower(AccountKey);
+SecurityEvent
+| where TimeGenerated > ago(30m)
+| where EventID == 4625
+| extend NormalizedTargetUser = tolower(TargetUserName)
+| where NormalizedTargetUser in (PrivilegedAccounts)
+| project TimeGenerated, Computer, TargetUserName, IpAddress, LogonType, FailureReason, Activity
+| order by TimeGenerated desc
